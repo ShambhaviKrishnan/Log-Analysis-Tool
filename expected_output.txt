@@ -1,0 +1,75 @@
+=====================================================
+  EXPECTED CONSOLE OUTPUT — log_analyzer.py
+  (Color codes stripped for readability)
+=====================================================
+
+$ python log_analyzer.py sample_logs.log
+
+  Log Analyzer — Python Project
+
+  Reading 'sample_logs.log' ...
+  Analyzing 33 lines ...
+
+=======================================================
+  LOG ANALYZER REPORT
+=======================================================
+  File    : sample_logs.log
+  Analyzed: 2024-01-15 08:31:00
+-------------------------------------------------------
+
+  LINE SUMMARY
+  Total Lines      : 33
+  Parsed Lines     : 31
+  Unrecognized     : 2
+
+  LOG LEVEL BREAKDOWN
+  INFO       :   13  █████████████
+  WARNING    :    5  █████
+  ERROR      :    9  █████████
+  CRITICAL   :    2  ██
+  DEBUG      :    2  ██
+
+  TIMESTAMPS
+  First entry : 2024-01-15 08:00:01
+  Last entry  : 2024-01-15 08:31:00
+  Total found : 31
+
+  ERROR / CRITICAL MESSAGE FREQUENCY
+  [x 5] Database connection failed: timeout after 30s  <-- REPEATED
+  [x 1] Max retries exceeded — database unreachable
+  [x 1] Null pointer exception in UserService.java:142
+  [x 1] Failed to write to log file: permission denied
+  [x 1] Unhandled exception: NullPointerException in OrderProcessor
+  [x 1] Failed to send email: SMTP connection refused
+  [x 1] Disk I/O error on /dev/sdb — potential hardware failure
+
+  *** CRITICAL REPEAT: 'Database connection failed: timeout after 30s' occurred 5 times! ***
+
+=======================================================
+
+  Save report to report.txt? (y/n): y
+  Report saved to: report.txt
+
+=====================================================
+  HOW TO RUN
+=====================================================
+
+  Basic usage:
+    python log_analyzer.py sample_logs.log
+
+  Auto-save report without prompt:
+    python log_analyzer.py sample_logs.log --save
+
+  Interactive mode (no arguments):
+    python log_analyzer.py
+    > Enter path to your log file: sample_logs.log
+
+=====================================================
+  EDGE CASES HANDLED
+=====================================================
+  - File not found          → prints error, exits cleanly
+  - Empty file              → prints warning, exits cleanly
+  - Lines without timestamp → still parsed correctly
+  - Comment/garbage lines   → counted as "Unrecognized"
+  - No errors in file       → shows green "No errors found"
+  - Single-occurrence errors→ shown without REPEATED tag

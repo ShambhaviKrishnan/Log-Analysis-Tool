@@ -1,0 +1,34 @@
+=======================================================
+  LOG ANALYZER REPORT
+=======================================================
+  File    : sample_logs.log
+  Generated: 2026-03-17 22:00:36
+-------------------------------------------------------
+
+LINE SUMMARY
+  Total Lines   : 33
+  Parsed Lines  : 31
+  Unrecognized  : 2
+
+LOG LEVEL BREAKDOWN
+  INFO      : 13
+  WARNING   : 5
+  ERROR     : 9
+  CRITICAL  : 2
+  DEBUG     : 2
+
+TIMESTAMPS
+  First : 2024-01-15 08:00:01
+  Last  : 2024-01-15 08:31:00
+  Total : 31
+
+ERROR FREQUENCY (sorted by count)
+  [x 5] Database connection failed: timeout after 30s *** REPEATED ***
+  [x 1] Max retries exceeded — database unreachable
+  [x 1] Null pointer exception in UserService.java:142
+  [x 1] Failed to write to log file: permission denied
+  [x 1] Unhandled exception: NullPointerException in OrderProcessor
+  [x 1] Failed to send email: SMTP connection refused
+  [x 1] Disk I/O error on /dev/sdb — potential hardware failure
+
+=======================================================

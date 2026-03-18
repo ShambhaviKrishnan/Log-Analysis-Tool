@@ -1,0 +1,33 @@
+2024-01-15 08:00:01 INFO    Application server started on port 8080
+2024-01-15 08:00:05 INFO    Connected to PostgreSQL database successfully
+2024-01-15 08:00:10 DEBUG   Config loaded: max_connections=100, timeout=30s
+2024-01-15 08:01:22 INFO    User 'admin' logged in from 192.168.1.10
+2024-01-15 08:03:45 WARNING Disk usage at 76% on /dev/sda1
+2024-01-15 08:05:10 ERROR   Database connection failed: timeout after 30s
+2024-01-15 08:05:12 INFO    Retrying database connection... attempt 1
+2024-01-15 08:05:15 ERROR   Database connection failed: timeout after 30s
+2024-01-15 08:05:18 INFO    Retrying database connection... attempt 2
+2024-01-15 08:05:22 ERROR   Database connection failed: timeout after 30s
+2024-01-15 08:05:25 CRITICAL Max retries exceeded — database unreachable
+2024-01-15 08:06:00 WARNING Memory usage at 82%, consider scaling up
+2024-01-15 08:07:15 INFO    Cache cleared successfully
+2024-01-15 08:10:30 ERROR   Null pointer exception in UserService.java:142
+2024-01-15 08:12:00 INFO    Scheduled backup started
+2024-01-15 08:12:55 WARNING SSL certificate expires in 7 days
+2024-01-15 08:14:10 ERROR   Failed to write to log file: permission denied
+2024-01-15 08:15:00 INFO    Health check passed: all services nominal
+2024-01-15 08:16:30 ERROR   Database connection failed: timeout after 30s
+2024-01-15 08:18:00 WARNING Disk usage at 80% on /dev/sda1
+2024-01-15 08:20:10 INFO    Backup completed: 2.3 GB saved to /backups/
+2024-01-15 08:21:05 DEBUG   Thread pool: 14/20 workers active
+2024-01-15 08:22:00 ERROR   Unhandled exception: NullPointerException in OrderProcessor
+2024-01-15 08:23:15 INFO    User 'john.doe' logged out
+2024-01-15 08:24:00 WARNING Rate limit reached for API endpoint /v1/orders
+2024-01-15 08:25:30 ERROR   Failed to send email: SMTP connection refused
+2024-01-15 08:26:45 INFO    Payment gateway responded in 340ms
+2024-01-15 08:27:00 CRITICAL Disk I/O error on /dev/sdb — potential hardware failure
+2024-01-15 08:28:10 INFO    Cleanup job completed: 512 temp files removed
+2024-01-15 08:29:55 ERROR   Database connection failed: timeout after 30s
+# This is a comment line — should be counted as unrecognized
+Some random text that is not a log entry
+2024-01-15 08:31:00 INFO    Application shutdown initiated 
