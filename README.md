@@ -27,13 +27,13 @@ A Python-based log analysis system that parses and analyzes system log files to 
 
 ##  Project Structure
 
+```
 log-analysis-tool/
 │── log_analyzer.py
 │── sample.log
 │── report.txt (generated)
 │── README.md
-
-
+```
 ---
 
 ##  How to Run
