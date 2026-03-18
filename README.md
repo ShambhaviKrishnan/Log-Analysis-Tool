@@ -51,14 +51,17 @@ log-analysis-tool/
 ---
 
 ##  Sample Input
+```
 2026-03-17 10:00:01 INFO User login successful
 2026-03-17 10:05:23 ERROR Failed to connect to database
 2026-03-17 10:06:45 WARNING Disk space low
 2026-03-17 10:07:12 ERROR Failed to connect to database
+```
 
 ---
 
 ##  Sample Output
+```
 Total Lines: 4
 INFO: 1
 WARNING: 1
@@ -66,6 +69,7 @@ ERROR: 2
 
 Most Frequent Error:
 "Failed to connect to database" occurred 2 times
+```
 
 ---
 
